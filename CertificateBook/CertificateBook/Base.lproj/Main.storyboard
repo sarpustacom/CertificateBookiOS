@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GBh-TI-Lln">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CertificateBook-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CertificateBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nIK-z2-X5h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomizedCell" rowHeight="98" id="cqR-bo-7nl" customClass="CertificateCell" customModule="CertificateBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cqR-bo-7nl" id="B6m-oY-Kru">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CertificateName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNG-bg-lXM">
+                                                    <rect key="frame" x="71" y="11" width="323" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from CertificateProvider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM9-T7-NfM">
+                                                    <rect key="frame" x="71" y="55" width="323" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graduationcap.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-mD-9Tb">
+                                                    <rect key="frame" x="13" y="24" width="50" height="50"/>
+                                                    <color key="tintColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="HCf-Jm-AEt"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SNG-bg-lXM" secondAttribute="bottom" constant="26" id="EZW-6P-O35"/>
+                                                <constraint firstItem="SNG-bg-lXM" firstAttribute="trailing" secondItem="B6m-oY-Kru" secondAttribute="trailingMargin" id="F9m-T1-14c"/>
+                                                <constraint firstItem="hcM-mD-9Tb" firstAttribute="leading" secondItem="B6m-oY-Kru" secondAttribute="leadingMargin" constant="-7" id="H3p-DS-hwA"/>
+                                                <constraint firstItem="uM9-T7-NfM" firstAttribute="bottom" secondItem="B6m-oY-Kru" secondAttribute="bottomMargin" id="NQh-YI-TBR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hcM-mD-9Tb" secondAttribute="bottom" constant="16" id="Z2Y-lM-nz1"/>
+                                                <constraint firstItem="SNG-bg-lXM" firstAttribute="trailing" secondItem="uM9-T7-NfM" secondAttribute="trailing" id="bDn-dm-QCK"/>
+                                                <constraint firstItem="hcM-mD-9Tb" firstAttribute="top" secondItem="B6m-oY-Kru" secondAttribute="topMargin" constant="12.5" id="etz-mJ-b8a"/>
+                                                <constraint firstItem="SNG-bg-lXM" firstAttribute="leading" secondItem="hcM-mD-9Tb" secondAttribute="trailing" constant="8" id="rfE-RM-pcF"/>
+                                                <constraint firstItem="uM9-T7-NfM" firstAttribute="top" secondItem="B6m-oY-Kru" secondAttribute="topMargin" constant="44" id="s4V-X3-WxC"/>
+                                                <constraint firstItem="SNG-bg-lXM" firstAttribute="leading" secondItem="uM9-T7-NfM" secondAttribute="leading" id="v5q-Ge-ihX"/>
+                                                <constraint firstItem="SNG-bg-lXM" firstAttribute="top" secondItem="B6m-oY-Kru" secondAttribute="topMargin" id="xaE-hn-iTt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="certificateFromText" destination="uM9-T7-NfM" id="YRG-c6-osL"/>
+                                            <outlet property="certificateNameText" destination="SNG-bg-lXM" id="f4g-8g-lAu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nIK-z2-X5h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FAU-Rg-HDd"/>
+                            <constraint firstItem="nIK-z2-X5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aK4-oP-q56"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nIK-z2-X5h" secondAttribute="bottom" id="k6r-hq-Tnm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIK-z2-X5h" secondAttribute="trailing" id="kET-jo-5B1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CertificateBook" id="vNh-jf-8T0"/>
+                    <connections>
+                        <outlet property="TableView" destination="nIK-z2-X5h" id="V1M-Tr-bgz"/>
+                        <segue destination="bFo-Kd-cSr" kind="show" identifier="toDetailsVC" id="iko-DJ-mwz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="n0Y-uD-6Yo">
+            <objects>
+                <viewController id="bFo-Kd-cSr" customClass="DetailsVC" customModule="CertificateBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1za-od-HeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ARi-k2-77L">
+                                <rect key="frame" x="72" y="103" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Wlg-rM-Alv"/>
+                                    <constraint firstAttribute="height" constant="270" id="mq7-aI-a5O"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Certificate Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-rh-vLt">
+                                <rect key="frame" x="72" y="400" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Certificate Provider" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahO-4D-JXQ">
+                                <rect key="frame" x="72" y="442" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Certificate ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBE-Ch-ubN">
+                                <rect key="frame" x="72" y="484" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nja-hl-2k4">
+                                <rect key="frame" x="72" y="598" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face &amp; Touch ID Protection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-nk-aGm">
+                                <rect key="frame" x="135.5" y="603" width="206.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-sK-tEG">
+                                <rect key="frame" x="121" y="647" width="172" height="77"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="bFo-Kd-cSr" eventType="touchUpInside" id="y05-kJ-tEd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Giving Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyB-6u-uLy">
+                                <rect key="frame" x="72" y="526" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-5j-ROm">
+                                <rect key="frame" x="153" y="732" width="109" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="KwT-pL-mYB"/>
+                                </constraints>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonClicked:" destination="bFo-Kd-cSr" eventType="touchUpInside" id="H3v-ET-02K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OeX-eL-SOF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBE-Ch-ubN" firstAttribute="leading" secondItem="cyB-6u-uLy" secondAttribute="leading" id="0f3-f3-ddt"/>
+                            <constraint firstItem="rrf-5j-ROm" firstAttribute="top" secondItem="9xB-sK-tEG" secondAttribute="bottom" constant="8" id="0g1-mr-aBO"/>
+                            <constraint firstItem="rrf-5j-ROm" firstAttribute="leading" secondItem="OeX-eL-SOF" secondAttribute="leading" constant="153" id="3ld-wJ-O1u"/>
+                            <constraint firstItem="OeX-eL-SOF" firstAttribute="bottom" secondItem="nja-hl-2k4" secondAttribute="bottom" constant="233" id="8G6-Xr-WwN"/>
+                            <constraint firstItem="kBE-Ch-ubN" firstAttribute="top" secondItem="ahO-4D-JXQ" secondAttribute="bottom" constant="8" id="94G-4c-zg7"/>
+                            <constraint firstItem="cyB-6u-uLy" firstAttribute="leading" secondItem="nja-hl-2k4" secondAttribute="leading" id="IiP-RN-65C"/>
+                            <constraint firstItem="nja-hl-2k4" firstAttribute="centerY" secondItem="bvg-nk-aGm" secondAttribute="centerY" id="Prn-pH-Myz"/>
+                            <constraint firstItem="ARi-k2-77L" firstAttribute="centerX" secondItem="1za-od-HeF" secondAttribute="centerX" id="Qgo-hf-cpo"/>
+                            <constraint firstItem="cyB-6u-uLy" firstAttribute="top" secondItem="kBE-Ch-ubN" secondAttribute="bottom" constant="8" id="Qx3-mn-m6V"/>
+                            <constraint firstItem="nja-hl-2k4" firstAttribute="top" secondItem="cyB-6u-uLy" secondAttribute="bottom" constant="38" id="Rye-OQ-U8t"/>
+                            <constraint firstItem="yNR-rh-vLt" firstAttribute="leading" secondItem="ahO-4D-JXQ" secondAttribute="leading" id="VUV-bs-H17"/>
+                            <constraint firstItem="cyB-6u-uLy" firstAttribute="trailing" secondItem="bvg-nk-aGm" secondAttribute="trailing" id="Vww-qD-Wvi"/>
+                            <constraint firstItem="9xB-sK-tEG" firstAttribute="leading" secondItem="OeX-eL-SOF" secondAttribute="leading" constant="121" id="XME-Yi-2md"/>
+                            <constraint firstItem="ahO-4D-JXQ" firstAttribute="leading" secondItem="kBE-Ch-ubN" secondAttribute="leading" id="Ym1-BB-Vw5"/>
+                            <constraint firstItem="yNR-rh-vLt" firstAttribute="top" secondItem="ARi-k2-77L" secondAttribute="bottom" constant="27" id="ZDu-e4-aba"/>
+                            <constraint firstItem="OeX-eL-SOF" firstAttribute="bottom" secondItem="rrf-5j-ROm" secondAttribute="bottom" constant="79" id="bdh-vD-tNC"/>
+                            <constraint firstItem="ARi-k2-77L" firstAttribute="top" secondItem="OeX-eL-SOF" secondAttribute="top" constant="15" id="dIW-0b-Wut"/>
+                            <constraint firstItem="9xB-sK-tEG" firstAttribute="centerX" secondItem="rrf-5j-ROm" secondAttribute="centerX" id="hRQ-bJ-Xjn"/>
+                            <constraint firstItem="kBE-Ch-ubN" firstAttribute="trailing" secondItem="cyB-6u-uLy" secondAttribute="trailing" id="jEA-RU-i45"/>
+                            <constraint firstItem="ahO-4D-JXQ" firstAttribute="trailing" secondItem="kBE-Ch-ubN" secondAttribute="trailing" id="oil-9D-0Pq"/>
+                            <constraint firstItem="ARi-k2-77L" firstAttribute="leading" secondItem="yNR-rh-vLt" secondAttribute="leading" id="pIi-jv-56e"/>
+                            <constraint firstItem="yNR-rh-vLt" firstAttribute="trailing" secondItem="ahO-4D-JXQ" secondAttribute="trailing" id="rtG-gb-s3z"/>
+                            <constraint firstItem="ARi-k2-77L" firstAttribute="trailing" secondItem="yNR-rh-vLt" secondAttribute="trailing" id="ulg-Ds-z5t"/>
+                            <constraint firstItem="cyB-6u-uLy" firstAttribute="centerX" secondItem="9xB-sK-tEG" secondAttribute="centerX" id="umD-CH-22d"/>
+                            <constraint firstItem="ahO-4D-JXQ" firstAttribute="top" secondItem="yNR-rh-vLt" secondAttribute="bottom" constant="8" id="whY-mc-VMt"/>
+                            <constraint firstItem="9xB-sK-tEG" firstAttribute="top" secondItem="bvg-nk-aGm" secondAttribute="bottom" constant="23" id="zVN-Fv-Un7"/>
+                            <constraint firstItem="ARi-k2-77L" firstAttribute="leading" secondItem="OeX-eL-SOF" secondAttribute="leading" constant="72" id="zsU-gX-lvx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cQz-Yf-DRn"/>
+                    <connections>
+                        <outlet property="CertificateIDText" destination="kBE-Ch-ubN" id="gcZ-B9-PeV"/>
+                        <outlet property="CertificateImageView" destination="ARi-k2-77L" id="O5V-co-4W3"/>
+                        <outlet property="CertificateNameText" destination="yNR-rh-vLt" id="jSI-hS-7ni"/>
+                        <outlet property="CertificateProviderText" destination="ahO-4D-JXQ" id="lwt-Wq-dMH"/>
+                        <outlet property="GivingDateText" destination="cyB-6u-uLy" id="19T-Q7-LnQ"/>
+                        <outlet property="ProtectedSwitch" destination="nja-hl-2k4" id="ioN-ke-wS3"/>
+                        <outlet property="saveButton" destination="9xB-sK-tEG" id="oKe-1v-ivZ"/>
+                        <outlet property="updateButton" destination="rrf-5j-ROm" id="ERf-KK-v09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pz9-FJ-jRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="htd-hU-7sx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GBh-TI-Lln" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X54-Oo-kcd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wnr-hR-8No"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0o-i0-Izx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
